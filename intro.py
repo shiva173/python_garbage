@@ -21,3 +21,8 @@ weight=int(input("Ваш вес: "))
 
 
 
+if age < 30 and 50 <= weight <= 120:
+    print("ok") #result = " вы здоровы"
+
+elif age > 30 and 50 >= weight >= 120:
+    print("займись собой") #result = " вам нужно заняться собой"
