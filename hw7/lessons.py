@@ -182,3 +182,26 @@ a = [1, 2, [1, 2]]
 b = copy.deepcopy(a)
 b[2][1] = 200
 print(a, b)
+
+# try catch если делим на ноль, если ошибка чтения данных при отсутствии ресруса или доступа к нему
+
+number = int(input('input number'))
+
+try:
+    result = 100 / number # код который может вызвать исключение
+except ZeroDivisionError as e:
+    #обработка конкретного исключения
+    print('divide on zero', e)
+except Exception as e:
+    #обработка общих исключений
+    print('unkwon error', e)
+else:
+    print('errors not find')
+finally:
+    print('выполняется всегда')
+print('end')
+
+# генерация исключений
+print('начало')
+raise Exception('что то пошло не так')
+print('end')
